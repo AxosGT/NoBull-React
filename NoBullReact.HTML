@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Hello World CDN Source Method</title>
+  </head>
+  <body>
+
+    <div id='root'></div>
+
+    <!--
+    The React CDN Source Method is a way to use React with out the need for Node.js, NPM or anything else.
+    All the group of packages you need for React are done with CDN.
+    This lets you build a test React Componets in HTML quicky and without the need for all the setup.
+    In production, the React CDN source method presented here is not ideal.
+    And is intended as a proof of concept and for testing purposes.
+    The link below well get you setup with the correct methodology.
+    https://github.com/facebookincubator/create-react-app
+    -->
+
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!--
+    This is where you link/write your React code.
+    -->
+    <!-- <script src="yourScripts.js" type="text/babel"></script> if you wish to use your own HTTP link for your React. If you want to use a local source you well have to host it -->
+
+    <script type='text/babel'>
+
+      class HelloMessage extends React.Component {
+        render() {
+          return <h1>Hello {this.props.message}!</h1>;
+        }
+      }
+
+      ReactDOM.render(<HelloMessage message="World" />, document.getElementById('root'));
+
+    </script>
+  </body>
+</html>
