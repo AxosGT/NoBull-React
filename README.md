@@ -8,3 +8,7 @@ In production, the React CDN source method presented here is not ideal.
 And is intended as a proof of concept and for testing purposes.
 The link below will get you setup with the correct methodology.
 https://github.com/facebookincubator/create-react-app
+
+## Glitch
+
+To get started right away, remix this Glitch project: https://glitch.com/~no-bull-react
